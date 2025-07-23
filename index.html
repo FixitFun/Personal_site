@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixitFun</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="light-theme">
+
+     <!-- Рабочий стол -->
+    <div class="desktop">
+        <div class="desktop-icons">
+            <div class="desktop-icon" onclick="openWindow('about-me')">
+                <img src="./img/icon/word-file-svgrepo-com.svg" alt="" style="width: 40px; height: 40px;">
+                <span>Обо мне</span>
+            </div>
+            <div class="desktop-icon" onclick="openWindow('portfolio')">
+                <img src="./img/icon/folder-open-svgrepo-com.svg" alt="" style="width: 40px; height: 40px;">
+                <span>Портфолио</span>
+            </div>
+            <div class="desktop-icon" onclick="openWindow('skills')">
+                <img src="./img/icon/javascript-file-svgrepo-com.svg" alt="" style="width: 40px; height: 40px;">
+                <span>Навыки</span>
+            </div>
+            <div class="desktop-icon" onclick="openWindow('blog')">
+                <img src="./img/icon/PostgresSQL.svg" alt="" style="width: 40px; height: 40px;">
+                <span>Блог</span>
+            </div>
+            <div class="desktop-icon" onclick="openWindow('contact')">
+                <img src="./img/icon/powershell-svgrepo-com.svg" alt="" style="width: 40px; height: 40px;">
+                <span>Контакты</span>
+            </div>
+            <!-- Новая иконка для комментариев -->
+            <div class="desktop-icon" onclick="openWindow('comments')">
+                <i class="fas fa-comments"></i>
+                <span>Комментарии</span>
+            </div>
+            
+            <!-- Новая иконка для ссылок -->
+            <div class="desktop-icon" onclick="openWindow('links')">
+                <img src="./img/icon/github-svgrepo-com.svg" alt="" style="width: 40px; height: 40px;">
+                <span>Ссылки</span>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Окно "Обо мне" в стиле Word -->
+        <div id="about-me" class="window" style="overflow: auto;">
+            <div class="window-header">
+                <div class="window-title">Обо мне - Microsoft Word</div>
+                <div class="window-controls">
+                    <div class="window-btn maximize" onclick="maximizeWindow('about-me')"><i class="fas fa-expand"></i></div>
+                    <div class="window-btn close" onclick="closeWindow('about-me')"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+                
+                <div class="word-menu-bar">
+                    <div class="word-menu-item">Файл</div>
+                    <div class="word-menu-item">Главная</div>
+                    <div class="word-menu-item">Вставка</div>
+                    <div class="word-menu-item">Дизайн</div>
+                    <div class="word-menu-item">Макет</div>
+                    <div class="word-menu-item">Ссылки</div>
+                    <div class="word-menu-item">Рецензирование</div>
+                    <div class="word-menu-item">Вид</div>
+                </div>
+                
+                <div class="word-ribbon">
+                    <div class="ribbon-group">
+                        <div class="ribbon-group-title">Буфер обмена</div>
+                        <div class="ribbon-buttons">
+                            <div class="ribbon-btn"><i class="fas fa-cut"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-copy"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-paste"></i></div>
+                        </div>
+                    </div>
+                    
+                    <div class="ribbon-group">
+                        <div class="ribbon-group-title">Шрифт</div>
+                        <div class="ribbon-buttons">
+                            <div class="ribbon-btn"><i class="fas fa-bold"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-italic"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-underline"></i></div>
+                        </div>
+                    </div>
+                    
+                    <div class="ribbon-group">
+                        <div class="ribbon-group-title">Абзац</div>
+                        <div class="ribbon-buttons">
+                            <div class="ribbon-btn"><i class="fas fa-align-left"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-align-center"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-align-right"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-list-ul"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-list-ol"></i></div>
+                        </div>
+                    </div>
+                    
+                    <div class="ribbon-group">
+                        <div class="ribbon-group-title">Стили</div>
+                        <div class="ribbon-buttons">
+                            <div class="ribbon-btn">Загол.</div>
+                            <div class="ribbon-btn" style="font-weight: bold;">Назв.</div>
+                            <div class="ribbon-btn">Обыч.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ribbon-group">
+                        <div class="ribbon-group-title">Редактирование</div>
+                        <div class="ribbon-buttons">
+                            <div class="ribbon-btn"><i class="fas fa-search"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-font"></i></div>
+                            <div class="ribbon-btn"><i class="fas fa-highlighter"></i></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="word-document-area">
+                    <div class="word-page">
+                        <div class="word-content">
+                            <h1>Алексей Иванов</h1>
+                            <h2>Веб-разработчик & UI/UX дизайнер</h2>
+                            
+                            <h2>Обо мне</h2>
+                            <p>Я профессиональный веб-разработчик с более чем 5-летним опытом создания современных веб-приложений. Специализируюсь на разработке пользовательских интерфейсов с использованием передовых технологий.</p>
+                            <p>Моя миссия - создавать не просто функциональные, но и эстетически привлекательные приложения, которые решают реальные проблемы пользователей. Я убеждён, что хороший дизайн и качественный код идут рука об руку.</p>
+                            
+                            <h2>Профессиональные навыки</h2>
+                            <div class="word-stats">
+                                <div class="stat-card">
+                                    <h4><i class="fas fa-laptop-code"></i> Frontend</h4>
+                                    <ul>
+                                        <li>JavaScript (ES6+)</li>
+                                        <li>React.js & Redux</li>
+                                        <li>Vue.js & Vuex</li>
+                                        <li>TypeScript</li>
+                                        <li>HTML5 & CSS3/SASS</li>
+                                    </ul>
+                                </div>
+                                <div class="stat-card">
+                                    <h4><i class="fas fa-server"></i> Backend</h4>
+                                    <ul>
+                                        <li>Node.js & Express</li>
+                                        <li>RESTful API</li>
+                                        <li>GraphQL</li>
+                                        <li>MongoDB</li>
+                                        <li>Firebase</li>
+                                    </ul>
+                                </div>
+                                <div class="stat-card">
+                                    <h4><i class="fas fa-paint-brush"></i> Дизайн</h4>
+                                    <ul>
+                                        <li>UI/UX Design</li>
+                                        <li>Figma & Adobe XD</li>
+                                        <li>Responsive Design</li>
+                                        <li>Анимации CSS</li>
+                                        <li>Дизайн-системы</li>
+                                    </ul>
+                                </div>
+                                <div class="stat-card">
+                                    <h4><i class="fas fa-tools"></i> Инструменты</h4>
+                                    <ul>
+                                        <li>Git & GitHub</li>
+                                        <li>Webpack & Vite</li>
+                                        <li>Docker</li>
+                                        <li>Jest & Cypress</li>
+                                        <li>CI/CD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h2>Профессиональный опыт</h2>
+                            <p><strong>Старший фронтенд-разработчик</strong> | TechInnovations Ltd | 2020 - настоящее время</p>
+                            <p>Руковожу командой из 5 разработчиков, проектирую архитектуру сложных веб-приложений, оптимизирую производительность.</p>
+                            
+                            <p><strong>Веб-разработчик</strong> | DigitalAgency | 2018 - 2020</p>
+                            <p>Разрабатывал пользовательские интерфейсы для клиентов из различных отраслей, внедрял современные подходы к разработке.</p>
+                            
+                            <h2>Образование</h2>
+                            <p><strong>Магистр компьютерных наук</strong> | Московский Технический Университет | 2016 - 2018</p>
+                            <p><strong>Бакалавр информационных систем</strong> | Санкт-Петербургский Политех | 2012 - 2016</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="word-status-bar">
+                    <div>Страница 1 из 1</div>
+                    <div class="word-status-info">
+                        <div>Число слов: 412</div>
+                        <div>Язык: Русский</div>
+                    </div>
+                    <div>100%</div>
+                </div>
+            </div>
+        </div>
+        
+   <!-- Окно "Портфолио" -->
+<div id="portfolio" class="window">
+    <div class="window-header">
+        <div class="window-title">Портфолио</div>
+        <div class="window-controls">
+            <div class="window-btn maximize" onclick="maximizeWindow('portfolio')"><i class="fas fa-expand"></i></div>
+            <div class="window-btn close" onclick="closeWindow('portfolio')"><i class="fas fa-times"></i></div>
+        </div>
+    </div>
+    <div class="window-content">
+        <!-- Уровень 1: Языки программирования -->
+        <div class="portfolio-grid" id="languages-grid"></div>
+        
+        <!-- Уровень 2: Проекты языка (файловый менеджер) -->
+        <div id="projects-explorer" class="project-explorer" style="display: none;">
+            <div class="explorer-header">
+                <div class="project-title" id="language-title">Проекты на <span id="current-language"></span></div>
+                <div class="explorer-controls">
+                    <button class="explorer-btn" onclick="backToLanguages()">
+                        <i class="fas fa-arrow-left"></i> Назад к языкам
+                    </button>
+                </div>
+            </div>
+            <div class="explorer-body">
+                <div class="folder-grid" id="projects-grid"></div>
+            </div>
+        </div>
+        
+        <!-- Уровень 3: Детали проекта -->
+        <div id="project-detail" class="project-detail" style="display: none;">
+            <div class="detail-header">
+                <div class="detail-title" id="project-detail-title"></div>
+                <div class="detail-controls">
+                    <button class="explorer-btn" onclick="backToProjects()">
+                        <i class="fas fa-arrow-left"></i> Назад к проектам
+                    </button>
+                </div>
+            </div>
+            <div class="detail-body">
+                <div class="detail-video">
+                    <video id="project-video" controls>
+                        Ваш браузер не поддерживает видео тег.
+                    </video>
+                </div>
+                <div class="detail-structure">
+                    <div class="structure-header">Структура проекта</div>
+                    <div class="structure-tree" id="project-structure"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Окно "Навыки" в стиле редактора кода -->
+        <div id="skills" class="window">
+            <div class="window-header">
+                <div class="window-title">Мои навыки - VS Code</div>
+                <div class="window-controls">
+                    <div class="window-btn maximize" onclick="maximizeWindow('skills')"><i class="fas fa-expand"></i></div>
+                    <div class="window-btn close" onclick="closeWindow('skills')"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="code-editor">
+                    <div class="editor-sidebar">
+                        <div class="editor-icon active"><i class="fas fa-file-code"></i></div>
+                        <div class="editor-icon"><i class="fas fa-search"></i></div>
+                        <div class="editor-icon"><i class="fas fa-git-alt"></i></div>
+                        <div class="editor-icon"><i class="fas fa-bug"></i></div>
+                        <div class="editor-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    </div>
+                    
+                    <div class="editor-main">
+                        <div class="editor-tabs">
+                            <div class="editor-tab active">
+                                <i class="fab fa-js"></i> skills.js
+                            </div>
+                            <div class="editor-tab">
+                                <i class="fas fa-user"></i> about.js
+                            </div>
+                            <div class="editor-tab">
+                                <i class="fas fa-briefcase"></i> portfolio.js
+                            </div>
+                        </div>
+                        
+                        <div class="editor-content">
+                            <div class="line-numbers">
+                                <div class="line-number">1</div>
+                                <div class="line-number">2</div>
+                                <div class="line-number">3</div>
+                                <div class="line-number">4</div>
+                                <div class="line-number">5</div>
+                                <div class="line-number">6</div>
+                                <div class="line-number">7</div>
+                                <div class="line-number">8</div>
+                                <div class="line-number">9</div>
+                                <div class="line-number">10</div>
+                                <div class="line-number">11</div>
+                                <div class="line-number">12</div>
+                                <div class="line-number">13</div>
+                                <div class="line-number">14</div>
+                                <div class="line-number">15</div>
+                                <div class="line-number">16</div>
+                                <div class="line-number">17</div>
+                                <div class="line-number">18</div>
+                                <div class="line-number">19</div>
+                                <div class="line-number">20</div>
+                                <div class="line-number">21</div>
+                                <div class="line-number">22</div>
+                                <div class="line-number">23</div>
+                                <div class="line-number">24</div>
+                                <div class="line-number">25</div>
+                                <div class="line-number">26</div>
+                                <div class="line-number">27</div>
+                                <div class="line-number">28</div>
+                                <div class="line-number">29</div>
+                                <div class="line-number">30</div>
+                                <div class="line-number">31</div>
+                                <div class="line-number">32</div>
+                                <div class="line-number">33</div>
+                                <div class="line-number">34</div>
+                                <div class="line-number">35</div>
+                                <div class="line-number">36</div>
+                                <div class="line-number">37</div>
+                                <div class="line-number">38</div>
+                                <div class="line-number">39</div>
+                                <div class="line-number">40</div>
+                                <div class="line-number">41</div>
+                                <div class="line-number">42</div>
+                                <div class="line-number">43</div>
+                                <div class="line-number">44</div>
+                                <div class="line-number">45</div>
+                                <div class="line-number">46</div>
+                                <div class="line-number">47</div>
+                                <div class="line-number">48</div>
+                                <div class="line-number">49</div>
+                                <div class="line-number">50</div>
+                            </div>
+                            
+                            <pre class="code-content"><code class="code-lines">
+<span class="keyword">class</span> <span class="class">AlexeyDeveloper</span> {
+  
+  <span class="comment">/* 
+   * Я фронтенд-инженер с острым взглядом на дизайн. 
+   * Увлеченный пользовательским интерфейсом и эстетикой, 
+   * я стремлюсь к созданию идеально адаптивных макетов 
+   * наряду с чистым, поддерживаемым и переиспользуемым кодом.
+   * Имею страсть к JavaScript(), {CSS} и любым инструментам,
+   * которые помогают превратить статичный HTML в динамичный, 
+   * привлекательный интерфейс с упором на пользовательский опыт.
+   */</span>
+ 
+  <span class="function">constructor</span>() {
+    <span class="keyword">this</span>.<span class="property">location</span> = <span class="string">'Москва, Россия'</span>;
+    <span class="keyword">this</span>.<span class="property">phoneNumber</span> = <span class="string">'+7 (999) 123-45-67'</span>;
+    <span class="keyword">this</span>.<span class="property">email</span> = <span class="string">'alexey@developer.ru'</span>;
+    <span class="keyword">this</span>.<span class="property">languages</span> = <span class="string">'Русский, Английский'</span>;
+    <span class="keyword">this</span>.<span class="property">portfolio</span> = <span class="string">'www.alexey-dev.ru'</span>;
+  }
+ 
+  <span class="function">experience</span>() {
+    <span class="keyword">return</span> [
+      {
+        <span class="property">date</span>: <span class="string">'Январь 2021 - настоящее время'</span>,
+        <span class="property">company</span>: <span class="string">'TechInnovations'</span>,
+        <span class="property">position</span>: <span class="string">'Senior Frontend Engineer'</span>,
+        <span class="property">role</span>: <span class="string">'Руководство командой разработчиков, проектирование архитектуры сложных веб-приложений, оптимизация производительности и UX.'</span>
+      },
+      {
+        <span class="property">date</span>: <span class="string">'Март 2019 - Декабрь 2020'</span>,
+        <span class="property">company</span>: <span class="string">'DigitalAgency'</span>,
+        <span class="property">position</span>: <span class="string">'Frontend Developer'</span>,
+        <span class="property">role</span>: <span class="string">'Разработка пользовательских интерфейсов для клиентов, создание адаптивных и кроссбраузерных решений.'</span>
+      },
+      {
+        <span class="property">date</span>: <span class="string">'Июнь 2017 - Февраль 2019'</span>,
+        <span class="property">company</span>: <span class="string">'WebSolutions'</span>,
+        <span class="property">position</span>: <span class="string">'Frontend Developer'</span>,
+        <span class="property">role</span>: <span class="string">'Разработка и поддержка веб-сайтов и приложений, внедрение современных подходов к разработке.'</span>
+      }
+    ];
+  }
+ 
+  <span class="function">skills</span>() {
+    <span class="keyword">return</span> [
+      <span class="comment">// Основные технологии</span>
+      <span class="string">'JavaScript'</span>, <span class="string">'TypeScript'</span>, <span class="string">'HTML5'</span>, <span class="string">'CSS3/SASS'</span>,
+      <span class="string">'React'</span>, <span class="string">'Redux'</span>, <span class="string">'Vue.js'</span>, <span class="string">'Node.js'</span>,
+      
+      <span class="comment">// Инструменты и библиотеки</span>
+      <span class="string">'Webpack'</span>, <span class="string">'Git'</span>, <span class="string">'Jest'</span>, <span class="string">'GraphQL'</span>,
+      <span class="string">'REST API'</span>, <span class="string">'Three.js'</span>, <span class="string">'D3.js'</span>,
+      
+      <span class="comment">// Методологии</span>
+      <span class="string">'Responsive Design'</span>, <span class="string">'Mobile First'</span>, 
+      <span class="string">'BEM'</span>, <span class="string">'Atomic Design'</span>,
+      
+      <span class="comment">// Дополнительные навыки</span>
+      <span class="string">'UI/UX Design'</span>, <span class="string">'Figma'</span>, <span class="string">'Adobe XD'</span>,
+      <span class="string">'Web Performance'</span>, <span class="string">'Accessibility'</span>
+    ];
+  }
+
+  <span class="function">education</span>() {
+    <span class="keyword">return</span> {
+      <span class="property">university</span>: <span class="string">'Московский Технический Университет'</span>,
+      <span class="property">degree</span>: <span class="string">'Магистр компьютерных наук'</span>,
+      <span class="property">year</span>: <span class="number">2016</span>
+    };
+  }
+}
+
+<span class="comment">// Создаем экземпляр разработчика</span>
+<span class="keyword">const</span> alexey = <span class="keyword">new</span> <span class="class">AlexeyDeveloper</span>();
+
+<span class="comment">// Экспортируем для использования в проектах</span>
+<span class="keyword">export</span> <span class="keyword">default</span> alexey;
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Окно "Блог" в стиле базы данных -->
+    <div id="blog" class="window">
+        <div class="window-header">
+            <div class="window-title">Блог разработчика - База данных</div>
+            <div class="window-controls">
+                <div class="window-btn maximize" onclick="maximizeWindow('blog')"><i class="fas fa-expand"></i></div>
+                <div class="window-btn close" onclick="closeWindow('blog')"><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+        <div class="window-content">
+            <div class="database-app">
+                <div class="database-header">
+                    <div class="database-title">
+                        <i class="fas fa-database"></i> Блог разработчика - База данных
+                    </div>
+                    <div class="database-controls">
+                        <button class="db-btn">
+                            <i class="fas fa-plug"></i> Подключение
+                        </button>
+                        <button class="db-btn db-btn-primary">
+                            <i class="fas fa-play"></i> Выполнить
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="database-toolbar">
+                    <div class="toolbar-group">
+                        <div class="toolbar-btn active" title="Новый запрос">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <div class="toolbar-btn" title="Выполнить">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="toolbar-btn" title="Остановить">
+                            <i class="fas fa-stop"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="toolbar-group">
+                        <div class="toolbar-btn" title="Вырезать">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <div class="toolbar-btn" title="Копировать">
+                            <i class="fas fa-copy"></i>
+                        </div>
+                        <div class="toolbar-btn" title="Вставить">
+                            <i class="fas fa-paste"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="toolbar-group">
+                        <div class="toolbar-btn" title="Отменить">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <div class="toolbar-btn" title="Повторить">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="database-container">
+                    <div class="database-sidebar">
+                        <div class="db-server-info">
+                            <h4><i class="fas fa-server"></i> DEV-BLOG-SERVER</h4>
+                            <p>Версия: MySQL 8.0</p>
+                            <p>Пользователь: admin</p>
+                            <p>Статус: <span style="color:#33ff33;">Подключено</span></p>
+                        </div>
+                        
+                        <div class="db-databases">
+                            <div class="db-db-item active">
+                                <i class="fas fa-database"></i> blog_db
+                            </div>
+                            <div class="db-db-item">
+                                <i class="fas fa-database"></i> portfolio_db
+                            </div>
+                            <div class="db-db-item">
+                                <i class="fas fa-database"></i> skills_db
+                            </div>
+                        </div>
+                        
+                        <div class="db-tables">
+                            <div class="db-db-item">
+                                <i class="fas fa-table"></i> posts
+                            </div>
+                            <div class="db-db-item">
+                                <i class="fas fa-table"></i> categories
+                            </div>
+                            <div class="db-db-item">
+                                <i class="fas fa-table"></i> tags
+                            </div>
+                            <div class="db-db-item">
+                                <i class="fas fa-table"></i> comments
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="database-main">
+                        <div class="db-query-editor">
+                            <div class="db-query-toolbar">
+                                <div class="db-query-title">SQLQuery1.sql</div>
+                                <div class="db-query-buttons">
+                                    <button class="db-btn">
+                                        <i class="fas fa-play"></i> Выполнить (F5)
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="db-query-content">
+                                <pre>-- Выбираем все записи из таблицы постов
+SELECT * FROM posts
+ORDER BY publish_date DESC
+LIMIT 10;</pre>
+                            </div>
+                        </div>
+                        
+                        <div class="db-results">
+                            <div class="db-results-header">
+                                <div>Результаты</div>
+                                <div>Записей: <span id="post-count">9</span></div>
+                            </div>
+                            <div class="db-results-content">
+                                <table class="db-table" id="blog-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Заголовок</th>
+                                            <th>Описание</th>
+                                            <th>Год</th>
+                                            <th>Статус</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="blog-posts">
+                                        <!-- Данные будут заполнены через JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="db-status-bar">
+                    <div class="db-status-item">
+                        <i class="fas fa-database pulse"></i> blog_db
+                    </div>
+                    <div class="db-status-item">
+                        <i class="fas fa-table"></i> posts
+                    </div>
+                    <div class="db-status-item">
+                        <i class="fas fa-clock"></i> Выполнено за 0.015 сек
+                    </div>
+                    <div class="db-status-item">
+                        <i class="fas fa-info-circle"></i> Запрос выполнен успешно
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+         <!-- Окно "Контакты" в стиле PowerShell -->
+<div id="contact" class="window">
+    <div class="window-header">
+        <div class="window-title">Контакты - Windows PowerShell</div>
+        <div class="window-controls">
+            <div class="window-btn maximize" onclick="maximizeWindow('contact')"><i class="fas fa-expand"></i></div>
+            <div class="window-btn close" onclick="closeWindow('contact')"><i class="fas fa-times"></i></div>
+        </div>
+    </div>
+    <div class="window-content">
+        <div class="powershell-app">
+            <div class="terminal-output" id="terminal-output">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">PS C:\Users\Alexey></span>
+                    <span class="command">help</span>
+                </div>
+                <div class="terminal-line output">Доступные команды:</div>
+                <div class="terminal-line output">• Send-Message - открыть форму для отправки сообщения</div>
+                <div class="terminal-line output">• Clear - очистить терминал</div>
+                <div class="terminal-line output">• Exit - закрыть PowerShell</div>
+                <div class="terminal-line output" style="color: var(--accent);">
+                    Введите команду "Send-Message" чтобы открыть форму для отправки сообщения
+                </div>
+            </div>
+            
+            <div class="powershell-input">
+                <span class="terminal-prompt">PS C:\Users\Alexey></span>
+                <input type="text" id="powershell-input" onkeypress="handlePowerShellInput(event)">
+                <span class="cursor"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для контактной формы -->
+<div id="contact-modal" class="modal">
+    <div class="modal-content-form">
+        <div class="modal-header">
+            <h3><i class="fas fa-envelope"></i> Отправить сообщение</h3>
+            <div class="modal-close" onclick="closeContactModal()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="form-row">
+                <label class="form-label">Имя:</label>
+                <input type="text" id="contact-name" class="form-input" required>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Email:</label>
+                <input type="email" id="contact-email" class="form-input" required>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Сообщение:</label>
+                <textarea id="contact-message" class="form-input" rows="4" required></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="form-btn cancel" onclick="closeContactModal()">Отмена</button>
+            <button class="form-btn send" onclick="sendContactMessage()">Отправить</button>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно успешной отправки -->
+<div id="success-modal" class="modal">
+    <div class="modal-content-form">
+        <div class="modal-body">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Сообщение отправлено!</h3>
+            <p>Я свяжусь с вами в ближайшее время</p>
+        </div>
+        <div class="modal-footer">
+            <button class="form-btn send" onclick="closeSuccessModal()">OK</button>
+        </div>
+    </div>
+</div>
+
+    
+    
+     <!-- Обновленная панель задач -->
+    <div class="taskbar">
+        <!-- Левая секция - иконка ОС и приложения -->
+<div class="taskbar-section taskbar-left">
+<div class="start-menu-container">
+    <div class="taskbar-icon os-icon" id="start-button">
+            <img src="./img/windows12.svg" alt="" style="width: 30px; height: 30px;">
+        </div>
+    <!-- Меню уже добавлено выше -->
+</div>
+            
+            <!-- Иконки приложений -->
+            <div class="taskbar-icon" onclick="openWindow('about-me')">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="taskbar-icon" onclick="openWindow('portfolio')">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="taskbar-icon" onclick="openWindow('skills')">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="taskbar-icon" onclick="openWindow('blog')">
+                <i class="fas fa-terminal"></i>
+            </div>
+            <div class="taskbar-icon" onclick="openWindow('contact')">
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+        
+        <!-- Центральная секция - элементы управления -->
+        <div class="taskbar-section taskbar-center light-theme">
+            <div class="control-btn" id="theme-toggle" title="Сменить тему">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="control-btn" title="Изменить язык">
+                <i class="fas fa-language"></i>
+            </div>
+            <div class="control-btn" title="Специальные возможности">
+                <i class="fas fa-universal-access"></i>
+            </div>
+        </div>
+        
+        <!-- Правая секция - Webring и время -->
+        <div class="taskbar-section taskbar-right">
+            <div class="webring">
+                <button class="webring-btn" title="Предыдущий">
+                    <a href="https://otomir23.me/webring/" class="fas fa-chevron-left"></a>
+                </button>
+                <span class="webring-text">Webring</span>
+                <button class="webring-btn" title="Следующий">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="time" id="current-time"></div>
+        </div>
+    </div>
+
+    <div class="start-menu-container">
+    <div class="start-menu" id="start-menu">
+        <div class="menu-item" onclick="openWindow('about-me'); toggleStartMenu()">
+            <i class="fas fa-user"></i> Обо мне
+        </div>
+        <div class="menu-item" onclick="openWindow('portfolio'); toggleStartMenu()">
+            <i class="fas fa-briefcase"></i> Портфолио
+        </div>
+        <div class="menu-item" onclick="openWindow('skills'); toggleStartMenu()">
+            <i class="fas fa-code"></i> Навыки
+        </div>
+        <div class="menu-item" onclick="openWindow('blog'); toggleStartMenu()">
+            <i class="fas fa-terminal"></i> Блог
+        </div>
+        <div class="menu-item" onclick="openWindow('contact'); toggleStartMenu()">
+            <i class="fas fa-envelope"></i> Контакты
+        </div>
+        <div class="menu-item" onclick="openWindow('comments'); toggleStartMenu()">
+            <i class="fas fa-comments"></i> Комментарии
+        </div>
+        <div class="menu-item" onclick="openWindow('links'); toggleStartMenu()">
+            <i class="fas fa-link"></i> Ссылки
+        </div>
+    </div>
+</div>
+    
+    <!-- Модальное окно проекта -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeProjectModal()">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-left">
+                <img id="project-image" src="" alt="Project Preview">
+            </div>
+            <div class="modal-right">
+                <h2 id="project-title"></h2>
+                <p id="project-description"></p>
+                
+                <h3>Использованные технологии</h3>
+                <div class="technologies" id="project-technologies"></div>
+                
+                <h3>Основные функции</h3>
+                <ul id="project-features"></ul>
+                
+                <div class="project-links">
+                    <a href="#" class="project-link" id="project-demo-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Демо проекта</span>
+                    </a>
+                    <a href="#" class="project-link" id="project-github-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub репозиторий</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Приветственное модальное окно -->
+   <div class="welcome-modal active" id="welcome-modal">
+    <div class="welcome-content">
+        <div class="welcome-header">
+            <div class="welcome-title">Добро пожаловать!</div>
+            <div class="welcome-close" onclick="closeWelcomeModal()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="welcome-body">
+            <div class="welcome-layout">
+                <div class="welcome-indicator" id="welcome-indicator"></div>
+                
+                <div class="welcome-text-content">
+                    <h2>Портфолио разработчика</h2>
+                    <p class="welcome-text">
+                        Добро пожаловать в интерактивное портфолио, созданное в стиле Windows 12! 
+                        Исследуйте мои проекты и навыки, взаимодействуя с элементами интерфейса.
+                        Нажмите на иконки на рабочем столе или в панели задач, чтобы открыть приложения.
+                    </p>
+                    <div class="welcome-features">
+                        <div class="feature">
+                            <i class="fas fa-mouse-pointer"></i>
+                            <span>Интерактивный интерфейс</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Проекты в деталях</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-comments"></i>
+                            <span>Оставьте отзыв</span>
+                        </div>
+                    </div>
+                    <button class="welcome-button" onclick="closeWelcomeModal()">
+                        Начать исследование
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="welcome-footer">
+            Версия портфолио: 2.0 | Последнее обновление: июнь 2025
+        </div>
+    </div>
+</div>
+
+
+    <!-- Новое окно комментариев -->
+        <div id="comments" class="window">
+            <div class="window-header">
+                <div class="window-title">Комментарии - Messenger</div>
+                <div class="window-controls">
+                    <div class="window-btn minimize" onclick="minimizeWindow('comments')"><i class="fas fa-minus"></i></div>
+                    <div class="window-btn maximize" onclick="maximizeWindow('comments')"><i class="fas fa-expand"></i></div>
+                    <div class="window-btn close" onclick="closeWindow('comments')"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="messenger-app">
+                    <div class="messenger-header">
+                        <i class="fas fa-comments"></i> Чат с посетителями
+                    </div>
+                    <div class="messenger-messages" id="chat-messages">
+                        <div class="message bot">
+                            <div>Привет! Оставьте свой отзыв о моем портфолио. Ваше мнение очень важно для меня!</div>
+                            <div class="message-info">
+                                <span>Система</span>
+                                <span>Только что</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messenger-input">
+                        <input type="text" id="message-input" placeholder="Введите ваше сообщение...">
+                        <div class="send-button" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       <!-- Окно ссылок в стиле Диспетчера задач -->
+        <div id="links" class="window">
+            <div class="window-header">
+                <div class="window-title">Ссылки - Диспетчер задач</div>
+                <div class="window-controls">
+                    <div class="window-btn minimize" onclick="minimizeWindow('links')"><i class="fas fa-minus"></i></div>
+                    <div class="window-btn maximize" onclick="maximizeWindow('links')"><i class="fas fa-expand"></i></div>
+                    <div class="window-btn close" onclick="closeWindow('links')"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="task-manager-layout">
+                    <!-- Левая панель - Процессы -->
+                    <div class="task-manager-sidebar">
+                        <div class="task-tab active">
+                            <i class="fas fa-microchip"></i> Процессы
+                        </div>
+                        <div class="task-tab">
+                            <i class="fas fa-chart-line"></i> Производительность
+                        </div>
+                        <div class="task-tab">
+                            <i class="fas fa-history"></i> Журнал приложений
+                        </div>
+                        <div class="task-tab">
+                            <i class="fas fa-power-off"></i> Автозагрузка
+                        </div>
+                        <div class="task-tab">
+                            <i class="fas fa-user"></i> Пользователи
+                        </div>
+                        <div class="task-tab">
+                            <i class="fas fa-info-circle"></i> Сведения
+                        </div>
+                        <div class="task-tab">
+                            <i class="fas fa-tasks"></i> Службы
+                        </div>
+                    </div>
+                    
+                    <!-- Правая панель - Основное содержимое -->
+                    <div class="task-manager-main">
+                        <!-- Вкладки -->
+                        <div class="task-manager-tabs">
+                            <div class="task-tab-header active">Процессы</div>
+                            <div class="task-tab-header">Производительность</div>
+                            <div class="task-tab-header">Журнал приложений</div>
+                        </div>
+                        
+                        <!-- Поиск -->
+                        <div class="task-manager-search">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Поиск ссылок..." id="link-search">
+                        </div>
+                        
+                        <!-- Заголовки колонок -->
+                        <div class="task-manager-header">
+                            <div class="header-col" data-sort="name">Название</div>
+                            <div class="header-col" data-sort="type">Тип</div>
+                            <div class="header-col" data-sort="status">Статус</div>
+                            <div class="header-col">Действия</div>
+                        </div>
+                        
+                        <!-- Список ссылок -->
+                        <div class="task-manager-list" id="links-list">
+                            <!-- Ссылки будут заполнены через JavaScript -->
+                        </div>
+                        
+                        <!-- Статус бар -->
+                        <div class="task-manager-footer">
+                            <div class="footer-item">
+                                <i class="fas fa-link"></i>
+                                <span id="links-count">0</span> ссылок
+                            </div>
+                            <div class="footer-item">
+                                <i class="fas fa-memory"></i>
+                                Использование памяти: <span id="memory-usage">1.2 ГБ</span>
+                            </div>
+                            <div class="footer-item">
+                                <i class="fas fa-microchip"></i>
+                                Загрузка ЦП: <span id="cpu-usage">12%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-post-container">
+        <div class="blog-post-header">
+            <h1 class="blog-post-title" id="post-title"></h1>
+            <div class="blog-post-meta">
+                Опубликовано: <span id="post-date"></span> | Автор: <span id="post-author"></span>
+            </div>
+        </div>
+        <div class="blog-post-content" id="post-content"></div>
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Вернуться на главную
+        </a>
+    </div>
+
+    <script>
+        // Получаем сохраненный ID поста
+        const postId = localStorage.getItem('currentPostId');
+        
+        // Загружаем данные поста
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!postId) {
+                document.getElementById('post-title').textContent = "Пост не найден";
+                document.getElementById('post-content').innerHTML = "<p>Извините, запрошенный пост не существует.</p>";
+                return;
+            }
+            
+            // Загрузка данных поста (в реальном проекте это был бы запрос к серверу)
+            const post = getPostById(postId);
+            
+            if (post) {
+                document.getElementById('post-title').textContent = post.title;
+                document.getElementById('post-date').textContent = post.date;
+                document.getElementById('post-author').textContent = post.author;
+                document.getElementById('post-content').innerHTML = post.content;
+            } else {
+                document.getElementById('post-title').textContent = "Пост не найден";
+                document.getElementById('post-content').innerHTML = "<p>Извините, запрошенный пост не существует.</p>";
+            }
+        });
+        
+        // Функция для получения поста по ID (временное решение)
+        function getPostById(id) {
+            const posts = {
+                1: {
+                    title: "Введение в React Hooks",
+                    date: "15 мая 2025",
+                    author: "Алексей Иванов",
+                    content: `
+                        <p>React Hooks - это функции, которые позволяют использовать состояние и другие возможности React без написания классов. Они появились в React 16.8 и с тех пор стали неотъемлемой частью разработки на React.</p>
+                        
+                        <h3>Основные хуки:</h3>
+                        <ul>
+                            <li><strong>useState</strong> - для управления состоянием компонента</li>
+                            <li><strong>useEffect</strong> - для выполнения побочных эффектов</li>
+                            <li><strong>useContext</strong> - для доступа к контексту</li>
+                            <li><strong>useReducer</strong> - для управления сложным состоянием</li>
+                            <li><strong>useCallback</strong> - для мемоизации функций</li>
+                            <li><strong>useMemo</strong> - для мемоизации значений</li>
+                            <li><strong>useRef</strong> - для создания изменяемых ссылок</li>
+                        </ul>
+                        
+                        <h3>Пример использования useState:</h3>
+                        <pre><code>function Counter() {
+    const [count, setCount] = useState(0);
+
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Вы кликнули {count} раз&lt;/p&gt;
+            &lt;button onClick={() => setCount(count + 1)}&gt;
+                Нажми на меня
+            &lt;/button&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+                        
+                        <h3>Преимущества хуков:</h3>
+                        <ol>
+                            <li>Упрощение логики компонентов</li>
+                            <li>Возможность повторного использования логики</li>
+                            <li>Уменьшение количества кода</li>
+                            <li>Более понятная структура компонентов</li>
+                        </ol>
+                        
+                        <p>Хуки полностью обратно совместимы и могут использоваться вместе с классовыми компонентами. Они не заменяют знания о React, но предоставляют более прямой API для знакомых концепций.</p>
+                    `
+                },
+                2: {
+                    title: "Оптимизация производительности в React",
+                    date: "22 мая 2025",
+                    author: "Алексей Иванов",
+                    content: `
+                        <p>Оптимизация производительности - важная часть разработки React-приложений. В этой статье мы рассмотрим основные методы оптимизации производительности в React.</p>
+                        
+                        <h3>Основные методы оптимизации:</h3>
+                        <ul>
+                            <li><strong>React.memo</strong> - для мемоизации компонентов</li>
+                            <li><strong>useMemo</strong> - для мемоизации вычисляемых значений</li>
+                            <li><strong>useCallback</strong> - для мемоизации функций</li>
+                            <li><strong>Virtualization</strong> - для рендеринга больших списков</li>
+                            <li><strong>Code Splitting</strong> - для разделения кода приложения</li>
+                        </ul>
+                        
+                        <h3>Пример использования React.memo:</h3>
+                        <pre><code>const MyComponent = React.memo(function MyComponent(props) {
+    /* рендеринг с использованием props */
+});</code></pre>
+                        
+                        <h3>Оптимизация больших списков:</h3>
+                        <p>Для работы с большими списками данных рекомендуется использовать библиотеки вроде react-window:</p>
+                        <pre><code>import { FixedSizeList } from 'react-window';
+
+const Row = ({ index, style }) => (
+    &lt;div style={style}&gt;Row {index}&lt;/div&gt;
+);
+
+const List = () => (
+    &lt;FixedSizeList
+        height={600}
+        width={300}
+        itemSize={35}
+        itemCount={1000}
+    &gt;
+        {Row}
+    &lt;/FixedSizeList&gt;
+);</code></pre>
+                        
+                        <h3>Практические советы:</h3>
+                        <ol>
+                            <li>Избегайте ненужных ререндеров</li>
+                            <li>Используйте инструменты разработчика React для анализа производительности</li>
+                            <li>Разделяйте код с помощью React.lazy и Suspense</li>
+                            <li>Оптимизируйте зависимости</li>
+                            <li>Используйте серверный рендеринг для критически важного контента</li>
+                        </ol>
+                    `
+                }
+                // Добавьте другие посты по аналогии
+            };
+            
+            return posts[id];
+        }
+    </script>
+<!-- В конце body -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script src="./js/data.js"></script>
+<script src="./js/theme.js"></script>
+<script src="./js/windows.js"></script>
+<script src="./js/time.js"></script>
+<script src="./js/contact.js"></script>
+<script src="./js/chat.js"></script>
+<script src="./js/blog.js"></script> <!-- Добавьте этот файл -->
+<script src="./js/projects.js"></script>
+<script src="./js/links.js"></script>
+<script src="./js/splash.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
