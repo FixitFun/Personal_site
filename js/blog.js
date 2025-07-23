@@ -3,7 +3,7 @@ function getStatusClass(status) {
     return {
         'Опубликован': 'published',
         'Черновик': 'draft',
-        'Архив': 'archived'
+        '': 'archived'
     }[status] || '';
 }
 
